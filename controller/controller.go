@@ -9,12 +9,12 @@ import (
 	"local.ex/main/pages/home"
 )
 
-func Server() {
+func Controller() {
 	port := "7890"
 	fmt.Printf("Starting server on port %q...\n", port)
 
 	http.HandleFunc("/", home.Page)
-	http.HandleFunc("/about", about.Page)
+	http.HandleFunc("/about", about.About)
 
 	err := http.ListenAndServe(":"+port, nil)
 	if err != nil {

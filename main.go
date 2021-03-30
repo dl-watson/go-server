@@ -5,5 +5,5 @@ import (
 )
 
 func main() {
-	controller.Server()
+	controller.Controller()
 }
