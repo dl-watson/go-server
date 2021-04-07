@@ -7,10 +7,11 @@ import (
 
 type Page struct {
 	Title string
+	Body string
 }
 
 func About(w http.ResponseWriter, r *http.Request) {
-	p := Page{Title: "About"}
+	p := Page{Title: "About", Body: "body"}
 	t, err := template.ParseFiles("pages/about/index.html")
     if err != nil {
         http.Error(w, err.Error(), http.StatusInternalServerError)
